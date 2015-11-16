@@ -1,0 +1,31 @@
+*vim-run-in-blender.txt* A short multi line description of your plugin
+
+===============================================================================
+CONTENTS                                                   *vim-run-in-blender*
+
+    1. Intro ....................................... |vim-run-in-blender-intro|
+    2. Requirements ......................... |vim-run-in-blender-requirements|
+    3. Usage ....................................... |vim-run-in-blender-usage|
+    4. Licence ................................... |vim-run-in-blender-licence|
+===============================================================================
+1. Intro                                             *vim-run-in-blender-intro*
+
+If you use Python and pby in Blender to develop addon's and like to use Vim as
+script editor.
+
+2. Requirements                               *vim-run-in-blender-requirements*
+
+You need Blender of course. https://www.blender.org
+
+In Blender install the add-on bpy_externall, activate it and start the listener
+See https://github.com/zeffii/bpy_externall
+
+For now you need a posix machine e.g. OSX or Linux.
+
+3. Usage                                             *vim-run-in-blender-usage*
+
+call :RunInBlender when your buffer contains as Blender script.
+
+4. Licence                                         *vim-run-in-blender-licence*
+
+Vim-Run-in_Blender is released under the GPL2.
