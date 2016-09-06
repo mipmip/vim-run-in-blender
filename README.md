@@ -8,7 +8,7 @@ script editor.
 You need Blender of course. https://www.blender.org
 
 In Blender install the add-on bpy_externall, activate it and start the listener
-See https://github.com/zeffii/bpy_externall
+See https://github.com/zeffii/bpy_externall. You might want to use a [blender bootstrap script]( https://github.com/mipmip/bootstrap_bpy_externall_server)
 
 For now you need a posix machine e.g. OSX or Linux.
 
