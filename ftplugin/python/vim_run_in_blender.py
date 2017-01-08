@@ -1,4 +1,5 @@
 import tempfile
+import os
 
 def vim_run_in_blender(buffer_contents):
     run_python_code('\n'.join(buffer_contents))
@@ -15,5 +16,5 @@ def run_python_code(code):
 
     print f.name
 
-    with open('/tmp/bpy_external.io', 'w') as io:
+    with open(os.path.join(tempfile.gettempdir(), 'bpy_external.io'), 'w') as io:
         io.write(f.name)
