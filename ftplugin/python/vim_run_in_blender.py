@@ -10,11 +10,11 @@ def vim_run_selected_in_blender(selected_text):
     return "executed selection in Blender"
 
 def run_python_code(code):
-    f = tempfile.NamedTemporaryFile(delete=False)
+    f = tempfile.NamedTemporaryFile(delete=False, mode='w')
     f.write(code+'\n')
     f.close()
 
-    print f.name
+    print (f.name)
 
     with open(os.path.join(tempfile.gettempdir(), 'bpy_external.io'), 'w') as io:
         io.write(f.name)

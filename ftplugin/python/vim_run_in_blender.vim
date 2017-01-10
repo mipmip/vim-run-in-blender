@@ -1,16 +1,16 @@
 " --------------------------------
 " Add our plugin to the path
 " --------------------------------
-python import sys
-python import vim
-python sys.path.append(vim.eval('expand("<sfile>:h")'))
+python3 import sys
+python3 import vim
+python3 sys.path.append(vim.eval('expand("<sfile>:h")'))
 
 " --------------------------------
 "  Function(s)
 " --------------------------------
 
 function! Run_In_Blender()
-python << endOfPython
+python3 << endOfPython
 
 from vim_run_in_blender import vim_run_in_blender
 
@@ -20,7 +20,7 @@ endOfPython
 endfunction
 
 fun! Run_Selection_In_Blender() range
-python << endOfPython
+python3 << endOfPython
 
 buf = vim.current.buffer
 (lnum1, col1) = buf.mark('<')
