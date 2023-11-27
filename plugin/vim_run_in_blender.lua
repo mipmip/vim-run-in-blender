@@ -13,10 +13,10 @@ local directory_exists = function(path)
 	return f == 0
 end
 
-local is_wsl = vim.fn.has('win32') ~= true and directory_exists('/mnt/c/Users')
+local is_wsl = vim.loop.os_uname().sysname ~= 'Windows_NT' and directory_exists('/mnt/c/Users')
 
 local tmp_folder = '/tmp'
-if vim.fn.has('win32') == true then
+if vim.loop.os_uname().sysname == 'Windows_NT' then
 	tmp_folder = vim.fn.expand('$TEMP')
 elseif is_wsl then
 	local userpath = io.popen('wslpath $(cmd.exe /C "echo %USERPROFILE%")')
